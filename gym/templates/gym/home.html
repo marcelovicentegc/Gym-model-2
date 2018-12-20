@@ -2,35 +2,7 @@
 {% block content %}
     <header class='p-header container'>
         <div class='fullscreen-img-wrapper'>
-            <img src='/static/gym/img/weight-lifting1.jpg'>
         </div>
-         <div class='fullscreen-img-wrapper'>
-            <img src='/static/gym/img/running.jpg'>
-        </div>
-         <div class='fullscreen-img-wrapper'>
-            <img src='/static/gym/img/weight-lifting.jpg'>
-        </div>
-         <div class='fullscreen-img-wrapper'>
-            <img src='/static/gym/img/crossfit.jpg'>
-        </div>
-        <script>
-            var slideIndex = 0;
-            showSlides();
-
-            function showSlides() {
-                var i;
-                var slides = document.getElementsByClassName('fullscreen-img-wrapper');
-                for (i = 0; i < slides.length; i++) {
-                    slides[i].style.display = 'none';
-                }
-                slideIndex++;
-                if (slideIndex > slides.length) {
-                    slideIndex = 1
-                }
-                slides[slideIndex - 1].style.display = 'block';
-                setTimeout(showSlides, 7000); 
-            };
-        </script>
         <div class='header-overlay'></div>
         <div class='header-content-wrapper'>
             <div class='header-content'>

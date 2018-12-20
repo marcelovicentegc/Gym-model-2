@@ -4,30 +4,62 @@
 @import url("https://fonts.googleapis.com/css?family=Crete+Round");
 @-webkit-keyframes crossFade {
   0% {
-    opacity: 1;
+    background: url("/static/gym/img/1.jpg");
+    background-size: cover;
   }
-  25% {
-    opacity: 1;
+  16.67% {
+    background: url("/static/gym/img/2.jpg");
+    background-size: cover;
   }
-  75% {
-    opacity: 1;
+  33.34% {
+    background: url("/static/gym/img/10.jpg");
+    background-size: cover;
+  }
+  50.01% {
+    background: url("/static/gym/img/4.jpg");
+    background-size: cover;
+  }
+  66.68% {
+    background: url("/static/gym/img/5.jpg");
+    background-size: cover;
+  }
+  83.35% {
+    background: url("/static/gym/img/6.jpg");
+    background-size: cover;
   }
   100% {
-    opacity: 0;
+    background: url("/static/gym/img/7.jpg");
+    background-size: cover;
   }
 }
 @keyframes crossFade {
   0% {
-    opacity: 1;
+    background: url("/static/gym/img/1.jpg");
+    background-size: cover;
   }
-  25% {
-    opacity: 1;
+  16.67% {
+    background: url("/static/gym/img/2.jpg");
+    background-size: cover;
   }
-  75% {
-    opacity: 1;
+  33.34% {
+    background: url("/static/gym/img/10.jpg");
+    background-size: cover;
+  }
+  50.01% {
+    background: url("/static/gym/img/4.jpg");
+    background-size: cover;
+  }
+  66.68% {
+    background: url("/static/gym/img/5.jpg");
+    background-size: cover;
+  }
+  83.35% {
+    background: url("/static/gym/img/6.jpg");
+    background-size: cover;
   }
   100% {
-    opacity: 0;
+    background: url("/static/gym/img/7.jpg");
+    background-size: cover;
   }
 }
 
@@ -158,23 +190,22 @@ body .container {
 }
 
 body .container .fullscreen-img-wrapper {
-  display: none;
   position: absolute;
   top: 105px;
   left: 0;
   width: 100vw;
-  min-width: 100vw !important;
   height: 90vh;
-  min-height: 90vh !important;
   overflow: hidden;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
   -webkit-animation-name: crossFade;
           animation-name: crossFade;
-  -webkit-animation-duration: 7s;
-          animation-duration: 7s;
-  -webkit-animation-timing-function: ease-in-out;
-          animation-timing-function: ease-in-out;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
+          animation-timing-function: cubic-bezier(1, 0, 0, 1);
   -webkit-box-shadow: 0px 8px 12px #9b9b9b71;
           box-shadow: 0px 8px 12px #9b9b9b71;
 }
