@@ -2,67 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Bowlby+One+SC");
 @import url("https://fonts.googleapis.com/css?family=Source+Code+Pro");
 @import url("https://fonts.googleapis.com/css?family=Crete+Round");
-@-webkit-keyframes crossFade {
-  0% {
-    background: url("/static/gym/img/1.jpg");
-    background-size: cover;
-  }
-  16.67% {
-    background: url("/static/gym/img/2.jpg");
-    background-size: cover;
-  }
-  33.34% {
-    background: url("/static/gym/img/10.jpg");
-    background-size: cover;
-  }
-  50.01% {
-    background: url("/static/gym/img/4.jpg");
-    background-size: cover;
-  }
-  66.68% {
-    background: url("/static/gym/img/5.jpg");
-    background-size: cover;
-  }
-  83.35% {
-    background: url("/static/gym/img/6.jpg");
-    background-size: cover;
-  }
-  100% {
-    background: url("/static/gym/img/7.jpg");
-    background-size: cover;
-  }
-}
-@keyframes crossFade {
-  0% {
-    background: url("/static/gym/img/1.jpg");
-    background-size: cover;
-  }
-  16.67% {
-    background: url("/static/gym/img/2.jpg");
-    background-size: cover;
-  }
-  33.34% {
-    background: url("/static/gym/img/10.jpg");
-    background-size: cover;
-  }
-  50.01% {
-    background: url("/static/gym/img/4.jpg");
-    background-size: cover;
-  }
-  66.68% {
-    background: url("/static/gym/img/5.jpg");
-    background-size: cover;
-  }
-  83.35% {
-    background: url("/static/gym/img/6.jpg");
-    background-size: cover;
-  }
-  100% {
-    background: url("/static/gym/img/7.jpg");
-    background-size: cover;
-  }
-}
-
 body {
   margin: 0;
   padding: 0;
@@ -196,18 +135,16 @@ body .container .fullscreen-img-wrapper {
   width: 100vw;
   height: 90vh;
   overflow: hidden;
-  -webkit-animation-name: crossFade;
-          animation-name: crossFade;
-  -webkit-animation-duration: 20s;
-          animation-duration: 20s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-play-state: running;
-          animation-play-state: running;
-  -webkit-animation-timing-function: cubic-bezier(1, 0, 0, 1);
-          animation-timing-function: cubic-bezier(1, 0, 0, 1);
-  -webkit-box-shadow: 0px 8px 12px #9b9b9b71;
-          box-shadow: 0px 8px 12px #9b9b9b71;
+  -webkit-box-shadow: 0px 5px 12px 0px #9b9b9b71;
+          box-shadow: 0px 5px 12px 0px #9b9b9b71;
+}
+
+body .container .fullscreen-img-wrapper img {
+  -webkit-transition: opacity .5s ease-in;
+  transition: opacity .5s ease-in;
+  min-height: 90vh;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 body .container .header-overlay {

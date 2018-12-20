@@ -2,7 +2,35 @@
 {% block content %}
     <header class='p-header container'>
         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/2.jpg'>
         </div>
+        <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/1.jpg'>
+        </div>
+         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/3.jpg'>
+        </div>
+         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/6.jpg'>
+        </div>
+        <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/5.jpg'>
+        </div>
+        <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/10.jpg'>
+        </div>
+        <script>
+            var current = 0,
+            slides = document.getElementsByTagName("img");
+
+            setInterval(function() {
+            for (var i = 0; i < slides.length; i++) {
+                slides[i].style.opacity = 0;
+            }
+            current = (current != slides.length - 1) ? current + 1 : 0;
+            slides[current].style.opacity = 1;
+            }, 7000);
+        </script>
         <div class='header-overlay'></div>
         <div class='header-content-wrapper'>
             <div class='header-content'>
