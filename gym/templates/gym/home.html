@@ -1,0 +1,95 @@
+{% extends "gym/base.html" %}
+{% block content %}
+    <header class='p-header container'>
+        <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/weight-lifting1.jpg'>
+        </div>
+         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/running.jpg'>
+        </div>
+         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/weight-lifting.jpg'>
+        </div>
+         <div class='fullscreen-img-wrapper'>
+            <img src='/static/gym/img/crossfit.jpg'>
+        </div>
+        <script>
+            var slideIndex = 0;
+            showSlides();
+
+            function showSlides() {
+                var i;
+                var slides = document.getElementsByClassName('fullscreen-img-wrapper');
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = 'none';
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                    slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = 'block';
+                setTimeout(showSlides, 7000); 
+            };
+        </script>
+        <div class='header-overlay'></div>
+        <div class='header-content-wrapper'>
+            <div class='header-content'>
+                <h1>You, at your best</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sit perferendis amet dolores in, similique atque quod voluptas! Placeat, aspernatur?</p>
+            </div>
+        </div>
+    </header>
+
+    <div id='who-are-we'>
+        <section class='section'>
+            <div class='container'>
+                <h1>Who are we?</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam molestias, neque rerum accusantium mollitia dolore perspiciatis molestiae incidunt est odit dicta. Consequuntur at harum reiciendis voluptates quisquam consequatur autem repudiandae ex repellendus dolore rem adipisci magni id, ipsa cum nostrum nemo iure. Ullam ipsum dolores natus reiciendis minus ipsa placeat itaque et optio eligendi hic maxime in, corporis enim modi quidem deleniti eveniet laudantium accusamus exercitationem consequatur odio veniam odit molestiae! In, odio cum. Iste nostrum eligendi nam dolores?</p>
+            </div>
+        </section>
+    </div>
+
+    <div id='services'>
+        <section class='section section-a'>
+            <div class='container'>
+                <h1>Weight training</h1>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aliquid, quae reprehenderit quidem facere voluptate maiores nisi ipsa? Cumque optio incidunt vel eligendi reiciendis sequi reprehenderit recusandae aliquam id quae perspiciatis sunt, consequatur odio aliquid cupiditate distinctio animi, ducimus possimus harum! Animi impedit perspiciatis molestias quisquam perferendis consequatur accusamus maiores!</p>
+            </div>
+        </section>
+    
+        <section class='section section-b'>
+            <div class='container'>
+                <h1>Functional training</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
+            </div>
+        </section>
+    
+        <section class='section section-c'>
+            <div class='container'>
+                <h1>Jump classes</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
+            </div>
+        </section>
+    
+        <section class='section section-d'>
+            <div class='container'>
+                <h1>Step classes</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
+            </div>
+        </section>
+    
+        <section class='section section-e'>
+            <div class='container'>
+                <h1>Dance classes</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
+            </div>
+        </section>
+    
+        <section class='section section-f'>
+            <div class='container'>
+                <h1>Running club</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
+            </div>
+        </section>
+    </div>
+{% endblock %}
