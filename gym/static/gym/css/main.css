@@ -200,11 +200,11 @@ body .container .header-content-wrapper .header-content-footer {
 
 body #services .section {
   padding: 20px 0;
+  text-align: justify;
 }
 
-body #services .section .section-b {
-  background: #333;
-  color: #fff;
+body #services .section p {
+  text-align: justify;
 }
 
 body img {
