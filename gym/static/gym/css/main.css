@@ -198,13 +198,16 @@ body .container .header-content-wrapper .header-content-footer {
   grid-area: c;
 }
 
-body #services .section {
-  padding: 20px 0;
-  text-align: justify;
+body #services .owl-carousel {
+  max-width: 1000px;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-body #services .section p {
-  text-align: justify;
+body #services .owl-carousel .owl-stage-outer .owl-stage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 body img {
