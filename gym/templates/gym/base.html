@@ -35,7 +35,31 @@
     {% block content %}
     {% endblock %}
     <div id='contact'>
-        <h1>A form here</h1>
+        <form action='' class='form-wrapper' method='POST'>
+			{% csrf_token %}
+			{{ form.non_field_errors }}
+			<div class='field-wrapper'>
+				{{ form.sender_name.errors }}
+				{{ form.sender_name }}
+				{{ form.sender_name.label_tag }}
+			</div>
+            <div class='field-wrapper'>
+                {{ form.sender_email.errors }}
+				{{ form.sender_email }}
+				{{ form.sender_email.label_tag }}
+            </div>
+            <div class='field-wrapper'>
+                {{ form.subject.errors }}
+				{{ form.subject }}
+				{{ form.subject.label_tag }}
+            </div>
+            <div class='field-wrapper'>
+                {{ form.body.errors }}
+				{{ form.body }}
+				{{ form.body.label_tag }}
+			</div>
+			<input id='submit-button' type='submit' value='SUBMIT' action=''>
+		</form>
     </div>
     <div class='footer'>
         <div id='reach-us'>

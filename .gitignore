@@ -2,6 +2,7 @@
 *.css.map
 db.sqlite3
 __pycache__
+migrations
 
 node_modules
 yarn-error.log
