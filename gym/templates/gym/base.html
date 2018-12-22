@@ -7,8 +7,8 @@
     <title>GYM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/static/gym/css/main.css" />
-    <script src="{% static '/node_modules/jquery/dist/jquery.js' %}"></script>
-    <script src="{% static '/node_modules/owl.carousel/dist/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'gym/node_modules/jquery/dist/jquery.js' %}"></script>
+    <script src="{% static 'gym/node_modules/owl.carousel/dist/owl.carousel.min.js' %}"></script>
 </head>
 <body>
     <nav>
@@ -17,11 +17,36 @@
     <div id='gym-navbar'>
         <i class="fas fa-bars"></i>
         <a id='gym-logo'>GYM</a>
-        <a class='nav-options' id='r1'> What do we offer? </a>
-        <a class='nav-options' id='r2'> Who are we? </a>
+        <a href='#services' class='nav-options scroll' id='r1'> What do we offer? </a>
+        <a href='#who-are-we' class='nav-options scroll' id='r2'> Who are we? </a>
         <a></a>
     </div>
     {% block content %}
     {% endblock %}
+    <div id='contact'>
+        <h1>A form here</h1>
+    </div>
+    <div class='footer'>
+        <div id='reach-us'>
+            <div id='open-hours'>
+                <h3>Opening hours</h3>
+                <h4>Monday to friday</h4>
+                <h5>06:00 - 22:00</h5>
+                <h4>Saturday to Sunday</h4>
+                <h5>07:00 - 18:00</h5>
+            </div>
+            <div id='legal'>
+                <h4>Logo</h4>
+                <h4>Privacy Policy</h4>
+                <h4>Terms & Conditions</h4>
+            </div>
+            <div id='find-us'>
+
+            </div>
+        </div>
+        <div id='foot'>
+            <p>Copyright © {% now "Y" %} | Gym | All Rights Reserved.</p>
+        </div>
+    </div>
 </body>
 </html>

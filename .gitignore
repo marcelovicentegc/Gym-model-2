@@ -3,6 +3,6 @@
 db.sqlite3
 __pycache__
 
-static/node_modules
+node_modules
 yarn-error.log
 .yarn-integrity
