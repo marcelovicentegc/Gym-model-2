@@ -21,6 +21,17 @@
         <a href='#who-are-we' class='nav-options scroll' id='r2'> Who are we? </a>
         <a></a>
     </div>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
     {% block content %}
     {% endblock %}
     <div id='contact'>
