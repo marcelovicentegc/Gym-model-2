@@ -90,6 +90,11 @@ body #gym-navbar #r2 {
   margin: 0px 10px 0px 20px;
 }
 
+body #gym-navbar #r3 {
+  float: right;
+  margin: 0px 10px 0px 20px;
+}
+
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
   body #gym-navbar #gym-logo {
     margin: 20px 0 0 60px;
@@ -116,7 +121,7 @@ body .p-header {
 }
 
 body .container {
-  max-width: 960px;
+  max-width: 1200px;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -170,15 +175,15 @@ body .container .header-content-wrapper {
 
 body .container .header-content-wrapper .header-content-header {
   -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
   -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: a;
 }
 
 body .container .header-content-wrapper .header-content {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
   grid-area: b;
 }
 
@@ -194,9 +199,9 @@ body .container .header-content-wrapper .header-content p {
 }
 
 body .container .header-content-wrapper .header-content-footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
   grid-area: c;
 }
 
@@ -225,6 +230,120 @@ body #services .owl-carousel .owl-nav {
 
 body #services .owl-carousel .owl-dots {
   text-align: center;
+}
+
+body .container form {
+  text-align: left;
+}
+
+body .container form > div {
+  position: relative;
+  overflow: hidden;
+}
+
+body .container form .field-wrapper {
+  margin-top: 2%;
+}
+
+body .container form input, body .container form textarea {
+  width: 90%;
+  right: 3%;
+  left: 3%;
+  top: 3%;
+  bottom: 3%;
+  padding: 8px 12px;
+  border: 1px solid black;
+  border-radius: 3px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: none;
+  position: relative;
+  font-size: 120%;
+  z-index: 1;
+  outline: 0;
+}
+
+body .container form input:valid, body .container form textarea:valid {
+  background: white;
+}
+
+body .container form input:focus, body .container form textarea:focus {
+  border-color: black;
+}
+
+body .container form input:focus + label, body .container form textarea:focus + label {
+  background: black;
+  color: white;
+  font-size: 100%;
+  padding: 1px 6px;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+body .container form label {
+  -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
+  position: absolute;
+  color: black;
+  text-transform: uppercase;
+  border-radius: 3px;
+  padding: 7px 7px 6px 6px;
+  right: 3%;
+  left: 3%;
+  top: 3%;
+}
+
+body .container form textarea {
+  display: inline-block;
+  resize: none;
+}
+
+body .container form.form-wrapper input, body .container form.form-wrapper textarea {
+  padding: 12px 12px 12px 12px;
+}
+
+body .container form.form-wrapper label {
+  border-radius: 3px;
+  right: 3%;
+  left: 3%;
+  top: 3%;
+  width: 100%;
+}
+
+body .container form.form-wrapper input:focus, body .container form.form-wrapper textarea:focus {
+  padding: 4px 6px 20px 6px;
+}
+
+body .container form.form-wrapper input:focus + label, body .container form.form-wrapper textarea:focus + label {
+  top: 100%;
+  margin-top: -22px;
+}
+
+body .container #reach-us {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: 'a b c' 'a b c' 'a b c';
+}
+
+body .container #reach-us #open-hours {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  grid-area: a;
+}
+
+body .container #reach-us #legal {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: b;
+}
+
+body .container #reach-us #find-us {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 3;
+  grid-area: c;
 }
 
 body img {

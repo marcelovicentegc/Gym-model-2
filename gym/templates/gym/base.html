@@ -17,9 +17,9 @@
     <div id='gym-navbar'>
         <i class="fas fa-bars"></i>
         <a id='gym-logo'>GYM</a>
-        <a href='#services' class='nav-options scroll' id='r1'> What do we offer? </a>
-        <a href='#who-are-we' class='nav-options scroll' id='r2'> Who are we? </a>
-        <a></a>
+        <a href='#get-in-touch' class='nav-options scroll' id='r1'> Get in touch! </a>
+        <a href='#services' class='nav-options scroll' id='r2'> What do we offer? </a>
+        <a href='#who-are-we' class='nav-options scroll' id='r3'> Who are we? </a>
     </div>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -34,7 +34,7 @@
     </script>
     {% block content %}
     {% endblock %}
-    <div id='contact'>
+    <div id='get-in-touch' class='container'>
         <form action='' class='form-wrapper' method='POST'>
 			{% csrf_token %}
 			{{ form.non_field_errors }}
@@ -61,7 +61,7 @@
 			<input id='submit-button' type='submit' value='SUBMIT' action=''>
 		</form>
     </div>
-    <div class='footer'>
+    <div id='footer' class='container'>
         <div id='reach-us'>
             <div id='open-hours'>
                 <h3>Opening hours</h3>
@@ -76,7 +76,8 @@
                 <h4>Terms & Conditions</h4>
             </div>
             <div id='find-us'>
-
+                <h4>Deimos, 001, Mars, Orion Spur
+                </h4>
             </div>
         </div>
         <div id='foot'>
