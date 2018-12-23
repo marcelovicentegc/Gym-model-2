@@ -61,8 +61,8 @@
 			<input id='submit-button' type='submit' value='SUBMIT' action=''>
 		</form>
     </div>
-    <div id='footer' class='container'>
-        <div id='reach-us'>
+    <div id='shoes'>
+        <div id='reach-us' class='container'>
             <div id='open-hours'>
                 <h3>Opening hours</h3>
                 <h4>Monday to friday</h4>
@@ -75,10 +75,25 @@
                 <h4>Privacy Policy</h4>
                 <h4>Terms & Conditions</h4>
             </div>
-            <div id='find-us'>
-                <h4>Deimos, 001, Mars, Orion Spur
-                </h4>
-            </div>
+            <div id='find-us'></div>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
+            <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
+            <script>
+                var platform = new H.service.Platform({
+                    'app_id': '16XUxA45ecnL8eTSuyEa',
+                    'app_code': 'Bso1RPFdyIuW5DoDuJoI1w'
+                });
+
+                var defaultLayers = platform.createDefaultLayers();
+
+                var map = new H.Map(
+                    document.getElementById('find-us'),
+                    defaultLayers.normal.map,
+                    {
+                        zoom: 10,
+                        center: { lat: 52.5, lng: 13.4 }
+                });
+            </script>
         </div>
         <div id='foot'>
             <p>Copyright © {% now "Y" %} | Gym | All Rights Reserved.</p>

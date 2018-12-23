@@ -44,7 +44,7 @@
         <div class='section'>
             <div class='container'>
                 <h1>Who are we?</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi laboriosam molestias, neque rerum accusantium mollitia dolore perspiciatis molestiae incidunt est odit dicta. Consequuntur at harum reiciendis voluptates quisquam consequatur autem repudiandae ex repellendus dolore rem adipisci magni id, ipsa cum nostrum nemo iure. Ullam ipsum dolores natus reiciendis minus ipsa placeat itaque et optio eligendi hic maxime in, corporis enim modi quidem deleniti eveniet laudantium accusamus exercitationem consequatur odio veniam odit molestiae! In, odio cum. Iste nostrum eligendi nam dolores?</p>
+                {{ who.who_are_we }}    
             </div>
         </div>
     </div>
@@ -60,30 +60,12 @@
     </script>
     <div id='services'>
         <div class='owl-carousel owl-theme'>
+            {% for service in services %}
             <div class='container'>
-                <h1>Weight training</h1>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam aliquid, quae reprehenderit quidem facere voluptate maiores nisi ipsa? Cumque optio incidunt vel eligendi reiciendis sequi reprehenderit recusandae aliquam id quae perspiciatis sunt, consequatur odio aliquid cupiditate distinctio animi, ducimus possimus harum! Animi impedit perspiciatis molestias quisquam perferendis consequatur accusamus maiores!</p>
+                <h1>{{ service.service_name }}</h1>
+                {{ service.service }}
             </div>
-            <div class='container'>
-                <h1>Functional training</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
-            </div>
-            <div class='container'>
-                <h1>Jump classes</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
-            </div>
-            <div class='container'>
-                <h1>Step classes</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
-            </div>
-            <div class='container'>
-                <h1>Dance classes</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
-            </div>
-            <div class='container'>
-                <h1>Running club</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum, at. Eveniet sapiente commodi dignissimos, ullam expedita sint vitae minima, accusamus tempora reiciendis nam quia assumenda esse, corrupti eligendi nulla et fuga veniam ipsum amet dolorum corporis. Molestias amet saepe minima voluptatem nostrum fugiat facilis soluta, enim accusamus quia quos itaque ad eligendi recusandae odit nobis eveniet. Quia, dolores. Porro, doloremque temporibus. Repellat architecto excepturi, animi odio voluptates neque accusantium maiores.</p>
-            </div>
+            {% endfor %}
         </div>
     </div>
 {% endblock %}

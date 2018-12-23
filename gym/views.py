@@ -2,6 +2,7 @@ import os
 from django.shortcuts import render
 from django.views.generic.edit import FormView
 from .forms import Contact as ContactForm
+from gym.models import WhoAreWe, Services
 from django.core.mail import send_mail
 
 
@@ -12,6 +13,11 @@ class Home(FormView):
     template_name = 'gym/home.html'
     form_class = ContactForm
     success_url = '/'
+
+    def get_context_data(self, **kwargs):
+        kwargs['who'] = WhoAreWe.objects.latest('date')
+        kwargs['services'] = Services.objects.all()
+        return super(Home, self).get_context_data(**kwargs)
 
     def form_valid(self, form):
         form.send_email()

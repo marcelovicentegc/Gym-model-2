@@ -319,31 +319,46 @@ body .container form.form-wrapper input:focus + label, body .container form.form
   margin-top: -22px;
 }
 
-body .container #reach-us {
+body #shoes #reach-us {
   display: -ms-grid;
   display: grid;
       grid-template-areas: 'a b c' 'a b c' 'a b c';
 }
 
-body .container #reach-us #open-hours {
+body #shoes #reach-us #open-hours {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 1;
   grid-area: a;
 }
 
-body .container #reach-us #legal {
+body #shoes #reach-us #legal {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 2;
   grid-area: b;
 }
 
-body .container #reach-us #find-us {
+body #shoes #reach-us #find-us {
   -ms-grid-row: 1;
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
   grid-area: c;
+}
+
+body #shoes #foot {
+  text-align: center;
+  height: 40px;
+  width: 100%;
+  margin: 0;
+  background-color: #ffc600;
+  color: #000;
+  display: inline-block;
+}
+
+body #shoes #foot p {
+  margin: 12px 0px 0px 0px;
+  height: 16px;
 }
 
 body img {
