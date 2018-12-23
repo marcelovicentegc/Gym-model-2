@@ -13,7 +13,7 @@ class WhoAreWe(models.Model):
 
 
 
-class Services(models.Model):
+class Service(models.Model):
     service_name = models.CharField(max_length=60, default=None)
     service_pic = models.ImageField(upload_to='services', null=True, blank=True, default=None)
     service = models.TextField(default=None)

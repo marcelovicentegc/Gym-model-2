@@ -15,7 +15,7 @@ body nav {
   top: 0;
   text-align: left;
   background-color: #000;
-  color: #fff;
+  color: #ffc600;
 }
 
 body nav a {
@@ -36,7 +36,7 @@ body nav a {
   }
 }
 
-body #gym-navbar {
+body #navbar {
   height: 70px;
   width: 100%;
   margin: 0;
@@ -45,14 +45,14 @@ body #gym-navbar {
   display: inline-block;
 }
 
-body #gym-navbar #gym-logo {
+body #navbar #gym-logo {
   font-family: 'Alfa Slab One', cursive;
   margin: 15px 0 0 60px;
   font-size: 180%;
   float: left;
 }
 
-body #gym-navbar .nav-options {
+body #navbar #menu .nav-options {
   text-decoration: none;
   color: #000;
   font-family: 'Alfa Slab One', cursive;
@@ -64,48 +64,53 @@ body #gym-navbar .nav-options {
   transition: .2s;
 }
 
+body #navbar #menu .nav-options:hover {
+  cursor: pointer;
+  border-bottom: 9px solid #000;
+}
+
+body #navbar #menu #r1 {
+  float: right;
+}
+
+body #navbar #menu #r2 {
+  float: right;
+  margin: 0px 10px 0px 20px;
+}
+
+body #navbar #menu #r3 {
+  float: right;
+  margin: 0px 10px 0px 20px;
+}
+
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-  body #gym-navbar .nav-options {
+  body #navbar #menu .nav-options {
     font-size: 0;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  body #gym-navbar .nav-options {
+  body #navbar #menu .nav-options {
     font-size: 0;
   }
 }
 
-body #gym-navbar .nav-options:hover {
-  cursor: pointer;
-  border-bottom: 9px solid #000;
+body #navbar #dropdown-btn {
+  display: none;
 }
 
-body #gym-navbar #r1 {
-  float: right;
-}
-
-body #gym-navbar #r2 {
-  float: right;
-  margin: 0px 10px 0px 20px;
-}
-
-body #gym-navbar #r3 {
-  float: right;
-  margin: 0px 10px 0px 20px;
+body #navbar #dropdown {
+  display: none;
 }
 
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-  body #gym-navbar #gym-logo {
+  body #navbar #gym-logo {
     margin: 20px 0 0 60px;
     font-size: 180%;
     float: left;
   }
-  body #gym-navbar .nav-options {
-    margin: 30px 60px 0px 20px;
-  }
-  body #gym-navbar .nav-options:hover {
-    cursor: pointer;
+  body #navbar #dropdown-btn {
+    display: block;
   }
 }
 
@@ -121,10 +126,10 @@ body .p-header {
 }
 
 body .container {
-  max-width: 1200px;
+  max-width: 80vw;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin: auto;
+  margin: 5vh auto;
   text-align: center;
 }
 
@@ -133,6 +138,10 @@ body .container {
     padding-left: 3rem;
     padding-right: 3rem;
   }
+}
+
+body .container p {
+  text-align: justify;
 }
 
 body .container .fullscreen-img-wrapper {
@@ -206,13 +215,25 @@ body .container .header-content-wrapper .header-content-footer {
 }
 
 body #services {
-  padding: 20px 0;
+  padding: 20px 10vw;
+}
+
+body #services .owl-carousel:active {
+  cursor: -webkit-grabbing;
 }
 
 body #services .owl-carousel {
   max-width: auto;
   width: 100%;
   overflow-x: hidden;
+}
+
+body #services .owl-carousel > div h1 {
+  text-align: center;
+}
+
+body #services .owl-carousel > div p {
+  text-align: justify;
 }
 
 body #services .owl-carousel .owl-stage-outer .owl-stage {
@@ -225,11 +246,71 @@ body #services .owl-carousel .owl-stage-outer .owl-stage {
 }
 
 body #services .owl-carousel .owl-nav {
-  text-align: center;
+  display: none;
 }
 
 body #services .owl-carousel .owl-dots {
   text-align: center;
+}
+
+body #services .owl-carousel .owl-dots .owl-dot {
+  margin: 4px;
+  height: 10px;
+  width: 10px;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+body #services .owl-carousel .owl-dots .owl-dot:hover {
+  cursor: pointer;
+  background-color: #ffc800;
+}
+
+body #services .owl-carousel .owl-dots .active {
+  background-color: #ffc600;
+}
+
+body #services .owl-next {
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  color: #ffc600;
+  -webkit-transition: .2s;
+  transition: .2s;
+  float: right;
+  margin-right: -5vw;
+  margin-top: -20vh;
+}
+
+body #services .owl-prev {
+  height: 20px;
+  width: 20px;
+  border: none;
+  border-radius: 50%;
+  background-color: #000;
+  color: #ffc600;
+  -webkit-transition: .2s;
+  transition: .2s;
+  float: left;
+  margin-left: -5vw;
+  margin-top: -20vh;
+}
+
+body #services .owl-next:hover {
+  background-color: #ffc600;
+  color: #000;
+  cursor: pointer;
+}
+
+body #services .owl-prev:hover {
+  background-color: #ffc600;
+  color: #000;
+  cursor: pointer;
 }
 
 body .container form {
@@ -272,8 +353,8 @@ body .container form input:focus, body .container form textarea:focus {
 }
 
 body .container form input:focus + label, body .container form textarea:focus + label {
-  background: black;
-  color: white;
+  background: #000;
+  color: #ffc600;
   font-size: 100%;
   padding: 1px 6px;
   z-index: 2;
@@ -284,7 +365,7 @@ body .container form label {
   -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   position: absolute;
-  color: black;
+  color: #b3b3b1;
   text-transform: uppercase;
   border-radius: 3px;
   padding: 7px 7px 6px 6px;
@@ -319,9 +400,21 @@ body .container form.form-wrapper input:focus + label, body .container form.form
   margin-top: -22px;
 }
 
+body #shoes {
+  font-family: 'Crete Round', serif;
+  text-align: center;
+  margin-top: 20px;
+  background-color: #000;
+  color: #ffc600;
+}
+
 body #shoes #reach-us {
+  padding: 10px 20px 10px 20px;
+  -webkit-box-shadow: 0px -5px 12px 0px #9b9b9b71;
+          box-shadow: 0px -5px 12px 0px #9b9b9b71;
   display: -ms-grid;
   display: grid;
+  grid-auto-columns: 1fr;
       grid-template-areas: 'a b c' 'a b c' 'a b c';
 }
 
@@ -344,10 +437,17 @@ body #shoes #reach-us #find-us {
   -ms-grid-row-span: 3;
   -ms-grid-column: 3;
   grid-area: c;
+  -webkit-margin-before: 1.33em;
+          margin-block-start: 1.33em;
+  -webkit-margin-after: 1.33em;
+          margin-block-end: 1.33em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 body #shoes #foot {
-  text-align: center;
   height: 40px;
   width: 100%;
   margin: 0;
@@ -369,11 +469,11 @@ body img {
 
 ::-moz-selection {
   background: rgba(0, 0, 0, 0.582);
-  color: #ffd200;
+  color: #fff;
 }
 
 ::selection {
   background: rgba(0, 0, 0, 0.582);
-  color: #ffd200;
+  color: #fff;
 }
 /*# sourceMappingURL=main.css.map */

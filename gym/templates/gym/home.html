@@ -44,28 +44,67 @@
         <div class='section'>
             <div class='container'>
                 <h1>Who are we?</h1>
-                {{ who.who_are_we }}    
+                <p>{{ who.who_are_we }}</p>    
             </div>
         </div>
     </div>
 
     <script>
     $(document).ready(function(){
+        var owl = $('.owl-carousel');
         $('.owl-carousel').owlCarousel({
             items: 1,
-            nav: true,
             loop: true,
+        });
+
+        owl.owlCarousel();
+
+        $('.owl-next').click(function() {
+            owl.trigger('next.owl.carousel');
+        });
+
+        $('.owl-prev').click(function() {
+            owl.trigger('prev.owl.carousel', [300]);
         });
     });
     </script>
     <div id='services'>
         <div class='owl-carousel owl-theme'>
-            {% for service in services %}
-            <div class='container'>
-                <h1>{{ service.service_name }}</h1>
-                {{ service.service }}
-            </div>
+            {% for detail in services %}
+                <div>
+                    <h1>{{ detail.service_name }}</h1>
+                    <p>{{ detail.service }}</p>
+                </div>
             {% endfor %}
         </div>
+        <div class='owl-next'><i class="fas fa-angle-right"></i></div>
+        <div class='owl-prev'><i class="fas fa-angle-left"></i></div>
+    </div>
+    <div id='get-in-touch' class='container'>
+        <form action='' class='form-wrapper' method='POST'>
+			{% csrf_token %}
+			{{ form.non_field_errors }}
+			<div class='field-wrapper'>
+				{{ form.sender_name.errors }}
+				{{ form.sender_name }}
+				{{ form.sender_name.label_tag }}
+			</div>
+            <div class='field-wrapper'>
+                {{ form.sender_email.errors }}
+				{{ form.sender_email }}
+				{{ form.sender_email.label_tag }}
+            </div>
+            <div class='field-wrapper'>
+                {{ form.subject.errors }}
+				{{ form.subject }}
+				{{ form.subject.label_tag }}
+            </div>
+            <div class='field-wrapper'>
+                {{ form.body.errors }}
+				{{ form.body }}
+				{{ form.body.label_tag }}
+			</div>
+			<input id='submit-button' type='submit' value='SUBMIT' action=''>
+		</form>
     </div>
 {% endblock %}
