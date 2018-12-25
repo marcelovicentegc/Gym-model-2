@@ -41,12 +41,8 @@
     </header>
 
     <div id='who-are-we'>
-        <div class='section'>
-            <div class='container'>
-                <h1>Who are we?</h1>
-                <p>{{ who.who_are_we }}</p>    
-            </div>
-        </div>
+        <h1>Who are we?</h1>
+        <p>{{ who.who_are_we }}</p>    
     </div>
 
     <script>
@@ -80,7 +76,8 @@
         <div class='owl-next'><i class="fas fa-angle-right"></i></div>
         <div class='owl-prev'><i class="fas fa-angle-left"></i></div>
     </div>
-    <div id='get-in-touch' class='container'>
+    <div id='get-in-touch'>
+        <h1>Get in touch</h1>
         <form action='' class='form-wrapper' method='POST'>
 			{% csrf_token %}
 			{{ form.non_field_errors }}

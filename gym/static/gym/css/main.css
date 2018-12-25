@@ -10,7 +10,6 @@ body {
 
 body nav {
   font-family: 'Crete Round', serif;
-  padding: 8px 0px 0px 0px;
   height: 30px;
   top: 0;
   text-align: left;
@@ -18,20 +17,21 @@ body nav {
   color: #ffc600;
 }
 
-body nav a {
+body nav p {
   -webkit-transition: .2s;
   transition: .2s;
-  margin: 20px 0px 0px 10px;
+  margin: 0;
+  padding: 4px 0px 0px 10px;
 }
 
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-  body nav a {
+  body nav p {
     font-size: 80%;
   }
 }
 
 @media only screen and (max-width: 320px) {
-  body nav a {
+  body nav p {
     font-size: 70%;
   }
 }
@@ -112,6 +112,9 @@ body #navbar #dropdown {
   body #navbar #dropdown-btn {
     display: block;
   }
+  body #navbar #dropdown-btn #dropdown {
+    text-align: center;
+  }
 }
 
 body .p-header {
@@ -129,7 +132,7 @@ body .container {
   max-width: 80vw;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin: 5vh auto;
+  margin: 0px auto 5vh auto;
   text-align: center;
 }
 
@@ -146,7 +149,7 @@ body .container p {
 
 body .container .fullscreen-img-wrapper {
   position: absolute;
-  top: 105px;
+  top: 100px;
   left: 0;
   width: 100vw;
   height: 90vh;
@@ -167,7 +170,7 @@ body .container .header-overlay {
   height: 90vh;
   width: 100vw;
   position: absolute;
-  top: 105px;
+  top: 100px;
   left: 0;
   background-color: rgba(0, 0, 0, 0.705);
   z-index: 1;
@@ -177,6 +180,7 @@ body .container .header-overlay {
 body .container .header-content-wrapper {
   display: -ms-grid;
   display: grid;
+  grid-auto-rows: 1fr;
       grid-template-areas: 'a a a' 'b b b'  'c c c';
   height: 90vh;
   z-index: 2;
@@ -197,11 +201,14 @@ body .container .header-content-wrapper .header-content {
 }
 
 body .container .header-content-wrapper .header-content h1 {
+  font-family: 'Alfa Slab One', cursive;
+  text-transform: uppercase;
   font-size: 50px;
   margin-bottom: 0;
 }
 
 body .container .header-content-wrapper .header-content p {
+  font-family: 'Crete Round', serif;
   font-size: 1.5rem;
   display: block;
   padding-bottom: 2rem;
@@ -214,8 +221,29 @@ body .container .header-content-wrapper .header-content-footer {
   grid-area: c;
 }
 
+body #who-are-we {
+  max-width: 80vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 0px auto 5vh auto;
+  text-align: center;
+}
+
+body #who-are-we h1 {
+  font-family: 'Alfa Slab One', cursive;
+  text-transform: uppercase;
+}
+
+body #who-are-we p {
+  font-family: 'Crete Round', serif;
+  text-align: justify;
+  padding: 20px;
+}
+
 body #services {
-  padding: 20px 10vw;
+  -webkit-box-shadow: 0px -5px 12px 0px #9b9b9b71, 0px 5px 12px 0px #9b9b9b71;
+          box-shadow: 0px -5px 12px 0px #9b9b9b71, 0px 5px 12px 0px #9b9b9b71;
+  padding: 10px 10vw;
 }
 
 body #services .owl-carousel:active {
@@ -229,11 +257,15 @@ body #services .owl-carousel {
 }
 
 body #services .owl-carousel > div h1 {
+  font-family: 'Alfa Slab One', cursive;
   text-align: center;
+  text-transform: uppercase;
 }
 
 body #services .owl-carousel > div p {
+  font-family: 'Crete Round', serif;
   text-align: justify;
+  padding: 20px;
 }
 
 body #services .owl-carousel .owl-stage-outer .owl-stage {
@@ -251,6 +283,14 @@ body #services .owl-carousel .owl-nav {
 
 body #services .owl-carousel .owl-dots {
   text-align: center;
+  -webkit-margin-before: 0.67em;
+          margin-block-start: 0.67em;
+  -webkit-margin-after: 0.67em;
+          margin-block-end: 0.67em;
+  -webkit-margin-start: 0px;
+          margin-inline-start: 0px;
+  -webkit-margin-end: 0px;
+          margin-inline-end: 0px;
 }
 
 body #services .owl-carousel .owl-dots .owl-dot {
@@ -259,26 +299,22 @@ body #services .owl-carousel .owl-dots .owl-dot {
   width: 10px;
   border: none;
   border-radius: 50%;
-  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.1);
   -webkit-transition: .2s;
   transition: .2s;
 }
 
 body #services .owl-carousel .owl-dots .owl-dot:hover {
   cursor: pointer;
-  background-color: #ffc800;
+  background-color: #ffc8002a;
 }
 
 body #services .owl-carousel .owl-dots .active {
-  background-color: #ffc600;
+  background-color: #ffc8002a;
 }
 
 body #services .owl-next {
-  height: 20px;
-  width: 20px;
-  border: none;
-  border-radius: 50%;
-  background-color: #000;
+  font-size: 200%;
   color: #ffc600;
   -webkit-transition: .2s;
   transition: .2s;
@@ -288,11 +324,7 @@ body #services .owl-next {
 }
 
 body #services .owl-prev {
-  height: 20px;
-  width: 20px;
-  border: none;
-  border-radius: 50%;
-  background-color: #000;
+  font-size: 200%;
   color: #ffc600;
   -webkit-transition: .2s;
   transition: .2s;
@@ -302,31 +334,44 @@ body #services .owl-prev {
 }
 
 body #services .owl-next:hover {
-  background-color: #ffc600;
   color: #000;
   cursor: pointer;
 }
 
 body #services .owl-prev:hover {
-  background-color: #ffc600;
   color: #000;
   cursor: pointer;
 }
 
-body .container form {
+body #get-in-touch {
+  max-width: 80vw;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: 10vh auto 5vh auto;
+  text-align: center;
+}
+
+body #get-in-touch h1 {
+  font-family: 'Alfa Slab One', cursive;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+body #get-in-touch form {
+  font-family: 'Crete Round', serif;
   text-align: left;
 }
 
-body .container form > div {
+body #get-in-touch form > div {
   position: relative;
   overflow: hidden;
 }
 
-body .container form .field-wrapper {
+body #get-in-touch form .field-wrapper {
   margin-top: 2%;
 }
 
-body .container form input, body .container form textarea {
+body #get-in-touch form input, body #get-in-touch form textarea {
   width: 90%;
   right: 3%;
   left: 3%;
@@ -344,15 +389,15 @@ body .container form input, body .container form textarea {
   outline: 0;
 }
 
-body .container form input:valid, body .container form textarea:valid {
+body #get-in-touch form input:valid, body #get-in-touch form textarea:valid {
   background: white;
 }
 
-body .container form input:focus, body .container form textarea:focus {
+body #get-in-touch form input:focus, body #get-in-touch form textarea:focus {
   border-color: black;
 }
 
-body .container form input:focus + label, body .container form textarea:focus + label {
+body #get-in-touch form input:focus + label, body #get-in-touch form textarea:focus + label {
   background: #000;
   color: #ffc600;
   font-size: 100%;
@@ -361,7 +406,7 @@ body .container form input:focus + label, body .container form textarea:focus + 
   text-transform: uppercase;
 }
 
-body .container form label {
+body #get-in-touch form label {
   -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   position: absolute;
@@ -374,16 +419,16 @@ body .container form label {
   top: 3%;
 }
 
-body .container form textarea {
+body #get-in-touch form textarea {
   display: inline-block;
   resize: none;
 }
 
-body .container form.form-wrapper input, body .container form.form-wrapper textarea {
+body #get-in-touch form.form-wrapper input, body #get-in-touch form.form-wrapper textarea {
   padding: 12px 12px 12px 12px;
 }
 
-body .container form.form-wrapper label {
+body #get-in-touch form.form-wrapper label {
   border-radius: 3px;
   right: 3%;
   left: 3%;
@@ -391,11 +436,11 @@ body .container form.form-wrapper label {
   width: 100%;
 }
 
-body .container form.form-wrapper input:focus, body .container form.form-wrapper textarea:focus {
+body #get-in-touch form.form-wrapper input:focus, body #get-in-touch form.form-wrapper textarea:focus {
   padding: 4px 6px 20px 6px;
 }
 
-body .container form.form-wrapper input:focus + label, body .container form.form-wrapper textarea:focus + label {
+body #get-in-touch form.form-wrapper input:focus + label, body #get-in-touch form.form-wrapper textarea:focus + label {
   top: 100%;
   margin-top: -22px;
 }
