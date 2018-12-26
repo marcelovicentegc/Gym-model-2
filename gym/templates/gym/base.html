@@ -30,36 +30,9 @@
             <li><a href='#services' class='dropdown-options scroll' id='r2'> What do we offer? </a></li>
             <li><a href='#who-are-we' class='dropdown-options scroll' id='r3'> Who are we? </a></li>
         </div> 
-        <script>
-            var menuBtn = document.querySelector('#dropdown-btn');
-            
-            function toggleMenu() {
-                var menu = document.querySelector('#dropdown');
-                var comptStyle = window.getComputedStyle(menu, null).display;
-        
-                if (comptStyle === 'block') {
-                    menu.style.display = 'none';
-                } else {
-                    menu.style.display = 'block';
-                }
-            };
-            
-            menuBtn.addEventListener('click', function() {
-                toggleMenu();
-            });
-        </script>
+        <script src="{% static 'gym/js/dropDown.js' %}"></script>
     </div>
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <script src="{% static 'gym/js/smoothScroll.js' %}"></script>
     {% block content %}
     {% endblock %}
     <div id='shoes'>
@@ -79,22 +52,7 @@
             <div id='find-us'></div>
             <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js" type="text/javascript" charset="utf-8"></script>
             <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js" type="text/javascript" charset="utf-8"></script>
-            <script>
-                var platform = new H.service.Platform({
-                    'app_id': '16XUxA45ecnL8eTSuyEa',
-                    'app_code': 'Bso1RPFdyIuW5DoDuJoI1w'
-                });
-
-                var defaultLayers = platform.createDefaultLayers();
-
-                var map = new H.Map(
-                    document.getElementById('find-us'),
-                    defaultLayers.normal.map,
-                    {
-                        zoom: 10,
-                        center: { lat: 52.5, lng: 13.4 }
-                });
-            </script>
+            <script src="{% static 'gym/js/here.js' %}"></script>
         </div>
         <div id='foot'>
             <p>Copyright © {% now "Y" %} | Gym | All Rights Reserved.</p>

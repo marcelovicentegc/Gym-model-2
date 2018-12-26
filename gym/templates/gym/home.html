@@ -1,5 +1,6 @@
 {% extends "gym/base.html" %}
 {% block content %}
+    {% load static %}   
     <header class='p-header container'>
         <div class='fullscreen-img-wrapper'>
             <img src='/static/gym/img/2.jpg'>
@@ -19,18 +20,8 @@
         <div class='fullscreen-img-wrapper'>
             <img src='/static/gym/img/10.jpg'>
         </div>
-        <script>
-            var current = 0,
-            slides = document.getElementsByTagName("img");
-
-            setInterval(function() {
-            for (var i = 0; i < slides.length; i++) {
-                slides[i].style.opacity = 0;
-            }
-            current = (current != slides.length - 1) ? current + 1 : 0;
-            slides[current].style.opacity = 1;
-            }, 7000);
-        </script>
+       
+        <script src="{% static 'gym/js/slides.js' %}"></script>
         <div class='header-overlay'></div>
         <div class='header-content-wrapper'>
             <div class='header-content'>
@@ -45,25 +36,7 @@
         <p>{{ who.who_are_we }}</p>    
     </div>
 
-    <script>
-    $(document).ready(function(){
-        var owl = $('.owl-carousel');
-        $('.owl-carousel').owlCarousel({
-            items: 1,
-            loop: true,
-        });
-
-        owl.owlCarousel();
-
-        $('.owl-next').click(function() {
-            owl.trigger('next.owl.carousel');
-        });
-
-        $('.owl-prev').click(function() {
-            owl.trigger('prev.owl.carousel', [300]);
-        });
-    });
-    </script>
+    <script src="{% static 'gym/js/carousel.js' %}"></script>
     <div id='services'>
         <div class='owl-carousel owl-theme'>
             {% for detail in services %}

@@ -1,0 +1,42 @@
+var menuBtn = document.querySelector('#dropdown-btn');
+var body = document.querySelector('body');
+            
+function toggleMenu() {
+    var menu = document.querySelector('#dropdown');
+    var comptStyle = window.getComputedStyle(menu, null).display;
+        
+    if (comptStyle === 'block') {
+        menu.style.animationName = 'slideOut';
+        menu.style.animationDuration = '.2s';
+        menu.style.animationDirection = 'linear';
+        setTimeout(function() {
+            menu.style.display = 'none'
+        }, 200)
+    } else {
+        // menu.style.display = 'block';
+        // menu.style.top = '100px'
+        menu.style.display = 'block';
+        menu.style.animationName = 'slideIn';
+        menu.style.animationDuration = '.2s';
+        menu.style.animationDirection = 'linear';
+        menu.style.top = '100px';
+    }
+};
+
+function toggleMenuOnWindowResize() {
+    var menu = document.querySelector('#dropdown');
+    if (x.matches) {
+                   
+    } else {
+        menu.style.top = '0px';
+        menu.style.display = 'none'; 
+    }
+};
+            
+menuBtn.addEventListener('click', function() {
+    toggleMenu();
+});
+
+var x = window.matchMedia('(max-width: 1024px)');
+toggleMenuOnWindowResize(x);
+x.addListener(toggleMenuOnWindowResize);
