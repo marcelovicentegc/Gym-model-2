@@ -23,13 +23,31 @@
             <a href='#who-are-we' class='nav-options scroll' id='r3'> Who are we? </a>
         </div>
         <div id='dropdown-btn'>
-            <i class="fas fa-bars"></i>
+            <i id='dd-btn' class="fas fa-bars"></i>
         </div>
         <div id='dropdown'>
-            <a href='#get-in-touch' class='dropdown-options scroll' id='r1'> Get in touch! </a>
-            <a href='#services' class='dropdown-options scroll' id='r2'> What do we offer? </a>
-            <a href='#who-are-we' class='dropdown-options scroll' id='r3'> Who are we? </a>  
+            <li><a href='#get-in-touch' class='dropdown-options scroll' id='r1'> Get in touch! </a></li>
+            <li><a href='#services' class='dropdown-options scroll' id='r2'> What do we offer? </a></li>
+            <li><a href='#who-are-we' class='dropdown-options scroll' id='r3'> Who are we? </a></li>
         </div> 
+        <script>
+            var menuBtn = document.querySelector('#dropdown-btn');
+            
+            function toggleMenu() {
+                var menu = document.querySelector('#dropdown');
+                var comptStyle = window.getComputedStyle(menu, null).display;
+        
+                if (comptStyle === 'block') {
+                    menu.style.display = 'none';
+                } else {
+                    menu.style.display = 'block';
+                }
+            };
+            
+            menuBtn.addEventListener('click', function() {
+                toggleMenu();
+            });
+        </script>
     </div>
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {

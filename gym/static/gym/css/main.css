@@ -111,9 +111,37 @@ body #navbar #dropdown {
   }
   body #navbar #dropdown-btn {
     display: block;
+    font-size: 200%;
+    float: right;
+    margin-top: 19px;
+    margin-right: -100px;
   }
-  body #navbar #dropdown-btn #dropdown {
-    text-align: center;
+  body #navbar #dropdown-btn:hover {
+    cursor: pointer;
+  }
+  body #navbar #dropdown {
+    display: none;
+    text-align: justify;
+    -webkit-transition: .2s;
+    transition: .2s;
+    width: 100vw;
+    height: 90px;
+    padding: 20px 0px 0px 0px;
+    margin-top: 70px;
+    position: absolute;
+    z-index: 1000;
+    background-color: #ffc600;
+  }
+  body #navbar #dropdown li {
+    list-style: none;
+  }
+  body #navbar #dropdown li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    height: 36px;
+    margin: 20px 20px;
   }
 }
 
@@ -156,6 +184,8 @@ body .container .fullscreen-img-wrapper {
   overflow: hidden;
   -webkit-box-shadow: 0px 5px 12px 0px #9b9b9b71;
           box-shadow: 0px 5px 12px 0px #9b9b9b71;
+  -webkit-perspective: 2px;
+          perspective: 2px;
 }
 
 body .container .fullscreen-img-wrapper img {
@@ -164,6 +194,11 @@ body .container .fullscreen-img-wrapper img {
   min-height: 90vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+body .container .fullscreen-img-wrapper img::after {
+  -webkit-transform: translateZ(-1px) scale(1.5);
+          transform: translateZ(-1px) scale(1.5);
 }
 
 body .container .header-overlay {
@@ -244,6 +279,7 @@ body #services {
   -webkit-box-shadow: 0px -5px 12px 0px #9b9b9b71, 0px 5px 12px 0px #9b9b9b71;
           box-shadow: 0px -5px 12px 0px #9b9b9b71, 0px 5px 12px 0px #9b9b9b71;
   padding: 10px 10vw;
+  position: relative;
 }
 
 body #services .owl-carousel:active {
@@ -314,23 +350,25 @@ body #services .owl-carousel .owl-dots .active {
 }
 
 body #services .owl-next {
+  position: absolute;
   font-size: 200%;
   color: #ffc600;
   -webkit-transition: .2s;
   transition: .2s;
   float: right;
-  margin-right: -5vw;
-  margin-top: -20vh;
+  right: 5vw;
+  top: 50%;
 }
 
 body #services .owl-prev {
+  position: absolute;
   font-size: 200%;
   color: #ffc600;
   -webkit-transition: .2s;
   transition: .2s;
   float: left;
-  margin-left: -5vw;
-  margin-top: -20vh;
+  left: 5vw;
+  top: 50%;
 }
 
 body #services .owl-next:hover {
@@ -347,7 +385,7 @@ body #get-in-touch {
   max-width: 80vw;
   padding-left: 1rem;
   padding-right: 1rem;
-  margin: 10vh auto 5vh auto;
+  margin: 10vh auto 10vh auto;
   text-align: center;
 }
 
@@ -360,6 +398,7 @@ body #get-in-touch h1 {
 body #get-in-touch form {
   font-family: 'Crete Round', serif;
   text-align: left;
+  margin: 0px 3% 0px 3%;
 }
 
 body #get-in-touch form > div {
@@ -371,22 +410,37 @@ body #get-in-touch form .field-wrapper {
   margin-top: 2%;
 }
 
+body #get-in-touch form #submit-button {
+  margin-top: 2%;
+  -webkit-transition: .2s;
+  transition: .2s;
+  background-color: #ffc600;
+  color: #000;
+}
+
+body #get-in-touch form #submit-button:hover {
+  cursor: pointer;
+  background-color: #000;
+  color: #ffc600;
+}
+
 body #get-in-touch form input, body #get-in-touch form textarea {
-  width: 90%;
-  right: 3%;
-  left: 3%;
+  font-family: 'Crete Round', serif;
+  padding: 12px 12px 12px 12px;
+  width: 100%;
   top: 3%;
   bottom: 3%;
-  padding: 8px 12px;
-  border: 1px solid black;
+  border: 1px solid #d6d6d6;
   border-radius: 3px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   background: none;
   position: relative;
-  font-size: 120%;
+  font-size: 100%;
   z-index: 1;
   outline: 0;
+  -webkit-transition: .2s;
+  transition: .2s;
 }
 
 body #get-in-touch form input:valid, body #get-in-touch form textarea:valid {
@@ -406,7 +460,17 @@ body #get-in-touch form input:focus + label, body #get-in-touch form textarea:fo
   text-transform: uppercase;
 }
 
+body #get-in-touch form input:focus, body #get-in-touch form textarea:focus {
+  padding: 4px 6px 20px 6px;
+}
+
+body #get-in-touch form input:focus + label, body #get-in-touch form textarea:focus + label {
+  top: 100%;
+  margin-top: -22px;
+}
+
 body #get-in-touch form label {
+  width: 100%;
   -webkit-transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   transition: background 0.2s, color 0.2s, top 0.2s, bottom 0.2s, right 0.2s, left 0.2s;
   position: absolute;
@@ -414,35 +478,12 @@ body #get-in-touch form label {
   text-transform: uppercase;
   border-radius: 3px;
   padding: 7px 7px 6px 6px;
-  right: 3%;
-  left: 3%;
   top: 3%;
 }
 
 body #get-in-touch form textarea {
   display: inline-block;
   resize: none;
-}
-
-body #get-in-touch form.form-wrapper input, body #get-in-touch form.form-wrapper textarea {
-  padding: 12px 12px 12px 12px;
-}
-
-body #get-in-touch form.form-wrapper label {
-  border-radius: 3px;
-  right: 3%;
-  left: 3%;
-  top: 3%;
-  width: 100%;
-}
-
-body #get-in-touch form.form-wrapper input:focus, body #get-in-touch form.form-wrapper textarea:focus {
-  padding: 4px 6px 20px 6px;
-}
-
-body #get-in-touch form.form-wrapper input:focus + label, body #get-in-touch form.form-wrapper textarea:focus + label {
-  top: 100%;
-  margin-top: -22px;
 }
 
 body #shoes {
