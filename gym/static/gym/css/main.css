@@ -74,13 +74,28 @@ body #navbar {
   background-color: #ffc600;
   color: #000;
   display: inline-block;
+  z-index: 3;
 }
 
 body #navbar #gym-logo {
   font-family: 'Alfa Slab One', cursive;
-  margin: 15px 0 0 60px;
+  margin: 15px 0px 0px 60px;
   font-size: 180%;
   float: left;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1023px) {
+  body #navbar #gym-logo {
+    margin: 15px 0px 0px 40px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body #navbar #gym-logo {
+    margin: 15px 0px 0px 20px;
+  }
 }
 
 body #navbar #menu .nav-options {
@@ -135,17 +150,65 @@ body #navbar #dropdown {
 }
 
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
-  body #navbar #gym-logo {
-    margin: 20px 0 0 60px;
-    font-size: 180%;
-    float: left;
-  }
   body #navbar #dropdown-btn {
     display: block;
     font-size: 200%;
     float: right;
     margin-top: 19px;
     margin-right: -100px;
+    -webkit-transition: .2s;
+    transition: .2s;
+  }
+  body #navbar #dropdown-btn:hover {
+    cursor: pointer;
+    font-size: 220%;
+  }
+  body #navbar #dropdown {
+    border-top: 1px solid #000;
+    display: none;
+    text-align: center;
+    width: 100vw;
+    height: 189px;
+    position: absolute;
+    z-index: 4;
+    background-color: #ffc600;
+  }
+  body #navbar #dropdown li {
+    list-style: none;
+    padding: 20px 0px 20px 0px;
+    border-bottom: 1px solid #000;
+  }
+  body #navbar #dropdown li a {
+    text-decoration: none;
+    color: #000;
+  }
+  body #navbar #dropdown li .dropdown-options {
+    font-family: 'Alfa Slab One', cursive;
+    text-transform: uppercase;
+    height: 36px;
+    padding: 20px;
+    background-color: transparent;
+    -webkit-transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+    transition: background 0.15s cubic-bezier(0.33, 0.66, 0.66, 1);
+    overflow-wrap: break-word;
+    word-break: break-word;
+    word-wrap: break-word;
+  }
+  body #navbar #dropdown li .dropdown-options:hover {
+    color: #ffc600;
+    -webkit-transition: .15s;
+    transition: .15s;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body #navbar #dropdown-btn {
+    display: block;
+    font-size: 200%;
+    float: right;
+    margin-top: 19px;
+    margin-right: -120px;
     -webkit-transition: .2s;
     transition: .2s;
   }
@@ -229,8 +292,6 @@ body .container .fullscreen-img-wrapper {
   width: 100vw;
   height: 90vh;
   overflow: hidden;
-  -webkit-box-shadow: 0px 5px 12px -12px #9b9b9b71;
-          box-shadow: 0px 5px 12px -12px #9b9b9b71;
 }
 
 body .container .fullscreen-img-wrapper img {
@@ -250,6 +311,18 @@ body .container .header-overlay {
   background-color: rgba(0, 0, 0, 0.705);
   z-index: 1;
   opacity: .85;
+}
+
+body .container .header-overlay:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  -webkit-box-shadow: 0px 5px 12px 0px #8f787871;
+          box-shadow: 0px 5px 12px 0px #8f787871;
 }
 
 body .container .header-content-wrapper {
@@ -316,8 +389,8 @@ body #who-are-we p {
 }
 
 body #services {
-  -webkit-box-shadow: 0px -5px 12px 0px #8f787871, 0px 5px 12px 0px #9b9b9b71;
-          box-shadow: 0px -5px 12px 0px #8f787871, 0px 5px 12px 0px #9b9b9b71;
+  -webkit-box-shadow: 0px -5px 12px 0px #8f787871, 0px 5px 12px 0px #8f787871;
+          box-shadow: 0px -5px 12px 0px #8f787871, 0px 5px 12px 0px #8f787871;
   padding: 10px 10vw;
   position: relative;
 }
@@ -538,8 +611,8 @@ body #shoes {
 
 body #shoes #reach-us {
   padding: 10px 20px 10px 20px;
-  -webkit-box-shadow: 0px -5px 12px 0px #9b9b9b71;
-          box-shadow: 0px -5px 12px 0px #9b9b9b71;
+  -webkit-box-shadow: 0px -5px 12px 0px #8f787871;
+          box-shadow: 0px -5px 12px 0px #8f787871;
   display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr;

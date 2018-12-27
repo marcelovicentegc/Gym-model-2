@@ -29,8 +29,12 @@ function toggleMenuOnWindowResize() {
     if (x.matches) {
                    
     } else {
-        menu.style.top = '0px';
-        menu.style.display = 'none'; 
+        menu.style.animationName = 'slideOut';
+        menu.style.animationDuration = '.2s';
+        menu.style.animationDirection = 'linear';
+        setTimeout(function() {
+            menu.style.display = 'none' 
+        }, 200)
     }
 };
             
