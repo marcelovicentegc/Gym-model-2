@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="static/gym/node_modules/@fortawesome/fontawesome-free/css/all.css" />
 </head>
 <body>
-    <nav>
+    <nav id='top'>
         <p id='adress'>Deimos, 001, Mars, Orion Spur</p>
     </nav>
     <div id='navbar'>
@@ -32,9 +32,14 @@
         </div> 
         <script src="{% static 'gym/js/dropDown.js' %}"></script>
     </div>
+     <div id='top-btn-wrapper'>
+        <a href='#top'><i id='top-btn' class='fas fa-angle-up scroll'></i></a>
+    </div>
+    <script src="{% static 'gym/js/top.js' %}"></script>
     <script src="{% static 'gym/js/smoothScroll.js' %}"></script>
     {% block content %}
     {% endblock %}
+    </div>
     <div id='shoes'>
         <div id='reach-us'>
             <div id='open-hours'>
