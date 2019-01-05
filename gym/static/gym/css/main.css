@@ -392,6 +392,26 @@ body .container .fullscreen-img-wrapper img {
      object-fit: cover;
 }
 
+body .container .fullscreen-img-wrapper:nth-child(2) img {
+  opacity: 0;
+}
+
+body .container .fullscreen-img-wrapper:nth-child(3) img {
+  opacity: 0;
+}
+
+body .container .fullscreen-img-wrapper:nth-child(4) img {
+  opacity: 0;
+}
+
+body .container .fullscreen-img-wrapper:nth-child(5) img {
+  opacity: 0;
+}
+
+body .container .fullscreen-img-wrapper:nth-child(6) img {
+  opacity: 0;
+}
+
 body .container .header-overlay {
   height: 90vh;
   width: 100vw;
