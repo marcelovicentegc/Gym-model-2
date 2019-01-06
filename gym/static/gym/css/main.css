@@ -167,14 +167,23 @@ body nav {
   top: 0;
   text-align: left;
   background-color: #000;
-  color: #ffc600;
 }
 
-body nav p {
+body nav p#adress {
   -webkit-transition: .2s;
   transition: .2s;
   margin: 0;
   padding: 4px 0px 0px 10px;
+  color: #ffc600;
+}
+
+body nav p#message {
+  text-align: center;
+  -webkit-transition: .2s;
+  transition: .2s;
+  margin: 0;
+  padding: 4px 0px 0px 10px;
+  color: #fff;
 }
 
 @media only screen and (min-width: 321px) and (max-width: 1023px) {
@@ -189,8 +198,10 @@ body nav p {
 
 @media only screen and (max-width: 320px) {
   body nav {
-    height: 20px p;
-    height-font-size: 90%;
+    height: 20px;
+  }
+  body nav p {
+    font-size: 90%;
   }
 }
 

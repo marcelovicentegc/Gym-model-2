@@ -25,9 +25,6 @@ class Home(FormView, CreateView):
     def form_valid(self, form):
         response = super().form_valid(form)
         form.send_email()
-        success_message = self.get_success_message(form.cleaned_data)
-        if success_message:
-            messages.success(self.request, success_message)
         return response
 
     def get_success_message(self, cleaned_data):
@@ -44,6 +41,7 @@ class Home(FormView, CreateView):
                 recipients = [os.environ.get('DJANGO_EMAIL_RECIPIENT')]
                 send_mail(subject=subject, message=body, from_email=sender_email, recipient_list=recipients, fail_silently=False)
                 form.save(commit=True)
+                messages.success(self.request, self.success_message)
                 return HttpResponseRedirect(self.success_url)
             else:
                 return render(request, self.template_name)        

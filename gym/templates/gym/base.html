@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>GYM</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='icon' href='/static/gym/img/gym-logo.png' type='image/png' />
     <link rel="stylesheet" type="text/css" media="screen" href="/static/gym/css/main.css" />
     <script src="{% static 'gym/node_modules/jquery/dist/jquery.js' %}"></script>
     <script src="{% static 'gym/node_modules/owl.carousel/dist/owl.carousel.min.js' %}"></script>
@@ -15,7 +16,7 @@
     {% if messages %}
         <nav id='top'>
             {% for message in messages %}
-            <p id='adress'>{{ message }}</p>
+            <p id='message'>{{ message }}</p>
             {% endfor %}
         </nav>
     {% else %}
