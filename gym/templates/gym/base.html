@@ -12,9 +12,17 @@
     <link rel="stylesheet" type="text/css" media="screen" href="static/gym/node_modules/@fortawesome/fontawesome-free/css/all.css" />
 </head>
 <body>
-    <nav id='top'>
-        <p id='adress'>Deimos, 001, Mars, Orion Spur</p>
-    </nav>
+    {% if messages %}
+        <nav id='top'>
+            {% for message in messages %}
+            <p id='adress'>{{ message }}</p>
+            {% endfor %}
+        </nav>
+    {% else %}
+        <nav id='top'>
+            <p id='adress'>Deimos, 001, Mars, Orion Spur</p>
+        </nav>
+    {% endif %}
     <div id='navbar'>
         <a id='gym-logo'>GYM <i class="fas fa-dumbbell"></i></a>
         <div id='menu'>
