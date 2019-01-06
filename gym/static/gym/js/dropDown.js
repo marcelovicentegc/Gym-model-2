@@ -19,7 +19,7 @@ function toggleMenu() {
             menu.style.animationName = 'slideIn';
             menu.style.animationDuration = '.2s';
             menu.style.animationDirection = 'linear';
-            menu.style.top = '90px';
+            menu.style.top = '80px';
         } else if (wdth > smallDevice && wdth < mediumDevice) {
             menu.style.display = 'block';
             menu.style.animationName = 'slideIn';
@@ -67,7 +67,7 @@ menuItem.forEach(function(item) {
     });
     item.addEventListener('click', function() {
         closeMenu();
-    })
+    });
 });
 
 function mouseOver(elem) {

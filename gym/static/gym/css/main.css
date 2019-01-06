@@ -119,7 +119,7 @@
       opacity: 0;
     }
     100% {
-      top: 90px;
+      top: 80px;
       opacity: 1;
     }
   }
@@ -129,13 +129,13 @@
       opacity: 0;
     }
     100% {
-      top: 90px;
+      top: 80px;
       opacity: 1;
     }
   }
   @-webkit-keyframes slideOut {
     0% {
-      top: 90px;
+      top: 80px;
       opacity: 1;
     }
     100% {
@@ -145,7 +145,7 @@
   }
   @keyframes slideOut {
     0% {
-      top: 90px;
+      top: 80px;
       opacity: 1;
     }
     100% {
@@ -169,7 +169,7 @@ body nav {
   background-color: #000;
 }
 
-body nav p#adress {
+body nav p {
   -webkit-transition: .2s;
   transition: .2s;
   margin: 0;
@@ -201,7 +201,8 @@ body nav p#message {
     height: 20px;
   }
   body nav p {
-    font-size: 90%;
+    font-size: 80%;
+    padding: 1px 0px 0px 8px;
   }
 }
 
@@ -242,7 +243,14 @@ body #navbar #menu .nav-options {
   transition: .2s;
 }
 
-body #navbar #menu .nav-options:hover {
+@media not all and (pointer: coarse) {
+  body #navbar #menu .nav-options:hover {
+    cursor: pointer;
+    border-bottom: 9px solid #000;
+  }
+}
+
+body #navbar #menu .nav-options:active {
   cursor: pointer;
   border-bottom: 9px solid #000;
 }
@@ -301,7 +309,16 @@ body #navbar #dropdown li .dropdown-options {
   word-wrap: break-word;
 }
 
-body #navbar #dropdown li .dropdown-options:hover {
+@media not all and (pointer: coarse) {
+  body #navbar #dropdown li .dropdown-options:hover {
+    color: #ffc600;
+    -webkit-transition: .15s;
+    transition: .15s;
+    cursor: pointer;
+  }
+}
+
+body #navbar #dropdown li .dropdown-options:active {
   color: #ffc600;
   -webkit-transition: .15s;
   transition: .15s;
@@ -325,7 +342,17 @@ body #navbar #dropdown li .dropdown-options:hover {
     margin-top: 16.5px;
     margin-right: -100px;
   }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1023px) and (pointer: coarse) {
   body #navbar #dropdown-btn:hover {
+    cursor: pointer;
+    font-size: 220%;
+  }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 1023px) {
+  body #navbar #dropdown-btn:active {
     cursor: pointer;
     font-size: 220%;
   }
@@ -352,7 +379,17 @@ body #navbar #dropdown li .dropdown-options:hover {
     margin-top: 14px;
     margin-right: -120px;
   }
+}
+
+@media only screen and (max-width: 320px) and (pointer: coarse) {
   body #navbar #dropdown-btn:hover {
+    cursor: pointer;
+    font-size: 220%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  body #navbar #dropdown-btn:active {
     cursor: pointer;
     font-size: 220%;
   }
@@ -457,10 +494,10 @@ body .container .header-overlay:before {
 
 @media only screen and (max-width: 320px) {
   body .container .fullscreen-img-wrapper {
-    top: 90px;
+    top: 80px;
   }
   body .container .header-overlay {
-    top: 90px;
+    top: 80px;
   }
 }
 
@@ -544,7 +581,15 @@ body #top-btn-wrapper #top-btn {
           box-shadow: 0px -5px 12px 0px #8f787871;
 }
 
-body #top-btn-wrapper #top-btn:hover {
+@media not all and (pointer: coarse) {
+  body #top-btn-wrapper #top-btn:hover {
+    cursor: pointer;
+    color: #ffc600;
+    background-color: #000;
+  }
+}
+
+body #top-btn-wrapper #top-btn:active {
   cursor: pointer;
   color: #ffc600;
   background-color: #000;
@@ -636,7 +681,14 @@ body #services .owl-carousel .owl-dots .owl-dot {
   transition: .2s;
 }
 
-body #services .owl-carousel .owl-dots .owl-dot:hover {
+@media not all and (pointer: coarse) {
+  body #services .owl-carousel .owl-dots .owl-dot:hover {
+    cursor: pointer;
+    background-color: #ffc8002a;
+  }
+}
+
+body #services .owl-carousel .owl-dots .owl-dot:active {
   cursor: pointer;
   background-color: #ffc8002a;
 }
@@ -656,6 +708,13 @@ body #services .owl-next {
   top: 50%;
 }
 
+@media not all and (pointer: coarse) {
+  body #services .owl-next:hover {
+    color: #000;
+    cursor: pointer;
+  }
+}
+
 body #services .owl-prev {
   position: absolute;
   font-size: 200%;
@@ -667,12 +726,19 @@ body #services .owl-prev {
   top: 50%;
 }
 
-body #services .owl-next:hover {
+@media not all and (pointer: coarse) {
+  body #services .owl-prev:hover {
+    color: #000;
+    cursor: pointer;
+  }
+}
+
+body #services .owl-next:active {
   color: #000;
   cursor: pointer;
 }
 
-body #services .owl-prev:hover {
+body #services .owl-prev:active {
   color: #000;
   cursor: pointer;
 }
@@ -714,7 +780,15 @@ body #get-in-touch form #submit-button {
   color: #000;
 }
 
-body #get-in-touch form #submit-button:hover {
+@media not all and (pointer: coarse) {
+  body #get-in-touch form #submit-button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #ffc600;
+  }
+}
+
+body #get-in-touch form #submit-button:active {
   cursor: pointer;
   background-color: #000;
   color: #ffc600;
