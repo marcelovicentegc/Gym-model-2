@@ -18,7 +18,10 @@ class Home(FormView, CreateView):
     success_message = "Your message was succesfully delivered to our team. We'll get back in touch soon!"
 
     def get_context_data(self, **kwargs):
-        kwargs['who'] = WhoAreWe.objects.latest('date')
+        try:
+            kwargs['who'] = WhoAreWe.objects.latest('date')
+        except WhoAreWe.DoesNotExist:
+            pass
         kwargs['services'] = Service.objects.all()
         return super(Home, self).get_context_data(**kwargs)
 
