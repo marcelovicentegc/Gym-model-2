@@ -7,3 +7,5 @@ migrations
 node_modules
 yarn-error.log
 .yarn-integrity
+
+licenses.txt
