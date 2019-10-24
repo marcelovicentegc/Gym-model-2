@@ -1,4 +1,4 @@
-# Gym-model
+# gym-model
 
 This is a gym-themed website designed for training purposes.
 
